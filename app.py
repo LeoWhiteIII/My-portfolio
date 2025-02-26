@@ -32,8 +32,8 @@ elif st.session_state.page == "Resume":
 
     pdf_path = "Resume.pdf"
 
-    pdf_url = "https://drive.google.com/file/d/18wb_5f3nq1moZboHakXS7FJOjUDrJPQG/view?usp=drive_link"  # Replace with actual hosted link
-    st.markdown(f'<iframe src="{pdf_url}" width="700" height="800"></iframe>', unsafe_allow_html=True)
+    # pdf_url = "https://github.com/LeoWhiteIII/My-portfolio/blob/main/Resume.pdf"  # Replace with actual hosted link
+    # st.markdown(f'<iframe src="{pdf_url}" width="700" height="800"></iframe>', unsafe_allow_html=True)
 
 
 
@@ -47,4 +47,11 @@ elif st.session_state.page == "Resume":
 
 elif st.session_state.page == "Projects":
     st.title("🛠️ Projects")
-    st.write("Here are some cool projects I've done...")
+    projects = {
+        "🔹 AI Chatbot": "https://github.com/LeoWhiteIII/AI-Chatbot",
+        "🔹 Portfolio Website": "https://github.com/LeoWhiteIII/My-portfolio",
+        "🔹 Data Analysis Tool": "https://github.com/LeoWhiteIII/Data-Analysis"
+    }
+
+    for project, link in projects.items():
+        st.markdown(f"[{project}]({link})")
